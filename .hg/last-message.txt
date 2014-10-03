@@ -1,0 +1,2 @@
+Tweak build instructions, freetype must be built first.
+

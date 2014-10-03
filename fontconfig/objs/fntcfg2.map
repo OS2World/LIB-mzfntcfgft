@@ -1,0 +1,268 @@
+** EXPERIMENTAL (HLL) ** Open Watcom Linker Version 1.6beta1 Limited Availability
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       13/01/04 22:03:56
+Executable Image: objs/fntcfg2.dll
+creating an OS/2 EMX dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+CGROUP                          0001:00000000        0000d0e0
+DGROUP                          0002:00000000        000004c0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+TEXT32                 CODE           CGROUP         0001:00000000   0000d0e0
+________TEXT           CODE           CGROUP         0001:0000d0e0   00000000
+DATA32                 DATA           DGROUP         0002:00000000   00000380
+SET1__os2dll           DATA           DGROUP         0002:00000380   00000004
+SET2__os2dll           DATA           DGROUP         0002:00000384   00000000
+SET3__os2dll           DATA           DGROUP         0002:00000384   00000004
+SET1___CTOR_LIST__     DATA           DGROUP         0002:00000388   00000004
+SET2___CTOR_LIST__     DATA           DGROUP         0002:0000038c   00000000
+SET3___CTOR_LIST__     DATA           DGROUP         0002:0000038c   00000004
+SET1___DTOR_LIST__     DATA           DGROUP         0002:00000390   00000004
+SET2___DTOR_LIST__     DATA           DGROUP         0002:00000394   00000000
+SET3___DTOR_LIST__     DATA           DGROUP         0002:00000394   00000004
+SET1___crtinit1__      DATA           DGROUP         0002:00000398   00000004
+SET2___crtinit1__      DATA           DGROUP         0002:0000039c   00000000
+SET3___crtinit1__      DATA           DGROUP         0002:0000039c   00000004
+SET1___crtexit1__      DATA           DGROUP         0002:000003a0   00000004
+SET2___crtexit1__      DATA           DGROUP         0002:000003a4   00000000
+SET3___crtexit1__      DATA           DGROUP         0002:000003a4   00000004
+SET1___eh_frame__      DATA           DGROUP         0002:000003a8   00000004
+SET2___eh_frame__      DATA           DGROUP         0002:000003ac   00000010
+SET3___eh_frame__      DATA           DGROUP         0002:000003bc   00000004
+SET1___eh_init__       DATA           DGROUP         0002:000003c0   00000004
+SET2___eh_init__       DATA           DGROUP         0002:000003c4   00000004
+SET3___eh_init__       DATA           DGROUP         0002:000003c8   00000004
+SET1___eh_term__       DATA           DGROUP         0002:000003cc   00000004
+SET2___eh_term__       DATA           DGROUP         0002:000003d0   00000004
+SET3___eh_term__       DATA           DGROUP         0002:000003d4   00000004
+SET1___fork_parent1__  DATA           DGROUP         0002:000003d8   00000004
+SET2___fork_parent1__  DATA           DGROUP         0002:000003dc   00000000
+SET3___fork_parent1__  DATA           DGROUP         0002:000003dc   00000004
+SET1___fork_child1__   DATA           DGROUP         0002:000003e0   00000004
+SET2___fork_child1__   DATA           DGROUP         0002:000003e4   00000000
+SET3___fork_child1__   DATA           DGROUP         0002:000003e4   00000004
+________DATA           DATA           DGROUP         0002:000003f0   00000000
+BSS32                  BSS            DGROUP         0002:000003f0   000000c0
+c_common               BSS            DGROUP         0002:000004b0   00000010
+________BSS            BSS            DGROUP         0002:000004c0   00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: G:\usr\lib\dll0hi.obj({standard input})
+0001:00000000* __text
+0002:00000000* __data
+0002:00000000* ___data_start
+0002:000003f0* ___bss_start
+0002:00000380+ __os2dll
+0002:00000388  ___CTOR_LIST__
+0002:00000390  ___DTOR_LIST__
+0002:00000398* ___crtinit1__
+0002:000003a0* ___crtexit1__
+0002:000003a8  ___eh_frame__
+0002:000003c0  ___eh_init__
+0002:000003cc  ___eh_term__
+0002:000003d8+ ___fork_parent1__
+0002:000003e0+ ___fork_child1__
+Module: R:/tmp\ldconv_fontconfig_o_723950e7c24a1ba478.obj(ldconv_fontconfig_o_723950e7c24a1ba478.obj)
+0002:000004b0  _pConfig
+0001:000000a0  _FcFini
+0001:00000df5* _stristr
+0001:00000e67  _FcInit
+0001:00001289  _FcConfigSubstitute
+0001:00001293  _FcDefaultSubstitute
+0001:000013e3  _FcFontMatch
+0001:00001ea4  _FcObjectSetBuild
+0001:00001edf  _FcObjectSetDestroy
+0001:00001ef8  _FcFontSetCreate
+0001:00001f33  _FcFontSetDestroy
+0001:00001f95  _FcFontSetAdd
+0001:00002041  _FcFontList
+0001:00002546  _FcInitBringUptoDate
+0001:000022de  _FcFontSort
+0001:000023df  _FcFreeTypeQuery
+0001:0000245f  _FcFreeTypeQueryFace
+0001:000024e7  _FcFreeTypeCharIndex
+0001:00002501  _FcInitReinitialize
+0001:000025cf  _FcConfigUptoDate
+0001:000025d9  _FcConfigGetCurrent
+0001:000025e3  _FcConfigGetFonts
+Module: R:/tmp\ldconv_fclang_o_723950e7c24a1bbbe8.obj(ldconv_fclang_o_723950e7c24a1bbbe8.obj)
+0001:00009e7e* _FcLangCompare
+0001:00009fd0  _FcLangSetHasLang
+0001:0000a14e  _FcLangSetCreate
+0001:0000a1a6  _FcLangSetDestroy
+0001:0000a1cf  _FcLangSetCopy
+0001:0000a2c9  _FcLangSetAdd
+0001:0000a4e4  _FcLangSetContains
+Module: R:/tmp\ldconv_fcpat_o_723950e7c24a1bd358.obj(ldconv_fcpat_o_723950e7c24a1bd358.obj)
+0001:0000a620  _FcPatternCreate
+0001:0000a6d2  _FcPatternDestroy
+0001:0000a78e  _FcPatternGetInteger
+0001:0000a8a6  _FcPatternGetString
+0001:0000a9fc  _FcPatternGetBool
+0001:0000ab54  _FcPatternGet
+0001:0000abac  _FcPatternGetLangSet
+0001:0000abdf  _FcPatternAddInteger
+0001:0000acd7  _FcPatternAddDouble
+0001:0000ad4b  _FcPatternGetDouble
+0001:0000adc9  _FcPatternAddString
+0001:0000af52  _FcPatternAddBool
+0001:0000b090  _FcPatternAddFTFace
+0001:0000b0d1  _FcPatternGetFTFace
+0001:0000b131  _FcPatternDel
+0001:0000b13b  _FcPatternEqual
+0001:0000b344  _FcPatternReference
+0001:0000b361  _FcPatternDuplicate
+0001:0000b424  _FcPatternBuild
+0001:0000b597  _FcPatternAdd
+0001:0000b675  _FcPatternAddWeak
+Module: R:/tmp\ldconv_fcstr_o_723950e7c24a1beac8.obj(ldconv_fcstr_o_723950e7c24a1beac8.obj)
+0001:0000b760  _FcStrCmpIgnoreCase
+0001:0000b77a* _FcStrCopy
+0001:0000b7d7  _FcStrSetCreate
+0001:0000b825  _FcStrSetDestroy
+0001:0000b9a6* _FcStrSetMember
+0001:0000b9f7  _FcStrSetAdd
+0001:0000ba47  _FcStrListCreate
+0001:0000ba8d  _FcStrListNext
+0001:0000bacf  _FcStrListDone
+Module: R:\tmp\ldconv_libgcc_eh_a_723950e7c24a1c3cd0.lib(emx-dllinit.obj)
+0001:0000baf0  _DLL_InitTerm
+Module: G:\usr\lib\libend.lib(src/libend/386/endlink386.asm)
+0002:000004c0  _end
+0002:000003f0  _edata
+Module: G:\usr\lib\libend.lib(src/libend/386/end.asm)
+0001:0000d0e0* _etext
+0001:0000d0e0* __etext
+0000:00000000  WEAK$ZERO
+0002:000004c0  __end
+0002:000003f0  __edata
+Module: R:\tmp\ldconv_libgcc_a_723950e7c24a1cf468.lib(_alloca.obj)
+0001:0000bb30  __alloca
+Module: R:\tmp\ldconv_libgcc_a_723950e7c24a1cf468.lib(emx-ctordtor.obj)
+0001:0000bb60  ___ctordtorTerm
+0001:0000bb92  ___ctordtorInit
+Module: R:\tmp\ldconv_libgcc_eh_a_723950e7c24a1c3cd0.lib(emx-eh.obj)
+0001:0000bc05  ___ehInit
+0001:0000bbd0* ___ehTerm
+Module: R:\tmp\ldconv_libgcc_eh_a_723950e7c24a1c3cd0.lib(unwind-dw2-fde.obj)
+0001:0000cacf* ___deregister_frame_info_bases
+0001:0000cc3a* ___deregister_frame_info
+0001:0000cc45  ___deregister_frame
+0001:0000cc6a* ___register_frame_info_table_bases
+0001:0000cd5c* ___register_frame_info_table
+0001:0000cd87  ___register_frame_table
+0001:0000cdaa* __Unwind_Find_FDE
+0001:0000cf86* ___register_frame_info_bases
+0001:0000d085* ___register_frame_info
+0001:0000d0b0* ___register_frame
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+___libc_ForkRegisterModule          libc064
+___init_dll                         libc064
+___libc_Back_termDll                libc064
+___libc_ForkDeregisterModule        libc064
+__atfork_callback                   libc064
+_FT_Done_FreeType                   freetyp2
+_FT_Get_Sfnt_Name_Count             freetyp2
+_FT_Get_Sfnt_Name                   freetyp2
+_FT_New_Face                        freetyp2
+_FT_Done_Face                       freetyp2
+PrfWriteProfileData                 pmshapi
+_FT_Open_Face                       freetyp2
+PrfQueryProfileData                 pmshapi
+PrfOpenProfile                      pmshapi
+PrfCloseProfile                     pmshapi
+_FT_Init_FreeType                   freetyp2
+DosQuerySysInfo                     doscalls
+PrfQueryProfileString               pmshapi
+WinGetLastError                     pmwin
+_FT_Get_Char_Index                  freetyp2
+__CRT_init                          libc064
+__std_free                          libc064
+__std_snprintf                      libc064
+__std_getenv                        libc064
+__std_strnicmp                      libc064
+__std_iconv_open                    libc064
+__std_iconv                         libc064
+__std_iconv_close                   libc064
+__std_strncpy                       libc064
+__std_stat                          libc064
+__std_memcpy                        libc064
+__std_strlen                        libc064
+__std_stricmp                       libc064
+__std_memset                        libc064
+__std_malloc                        libc064
+__std_strdup                        libc064
+__std_strupr                        libc064
+__std_strstr                        libc064
+__std_realloc                       libc064
+__std_strcat                        libc064
+__std_strcpy                        libc064
+__std_time                          libc064
+__std_difftime                      libc064
+__std_strcmp                        libc064
+___ctordtorTerm1                    libc064
+___ctordtorInit1                    libc064
+__fmutex_create                     libc064
+___libc_Back_threadSleep            libc064
+___libc_GpFIBLIS                    libc064
+___fmutex_request_internal          libc064
+___fmutex_request_internal_must_complete libc064
+___fmutex_release_internal_must_complete libc064
+___fmutex_release_internal          libc064
+__std_abort                         libc064
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+R:\tmp\ldconv_freetype_a_723950e7c24a1bfe50.lib
+R:\tmp\ldconv_libgcc_eh_a_723950e7c24a1c3cd0.lib
+R:\tmp\ldconv_libgcc_a_723950e7c24a1cf468.lib
+G:\usr\lib\libc_alias.lib
+G:\usr\local446\lib\libc_dll.lib
+G:\usr\lib\libos2.lib
+G:\usr\lib\libend.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  d5a0 (54688.)
+Link time: 00:00.08

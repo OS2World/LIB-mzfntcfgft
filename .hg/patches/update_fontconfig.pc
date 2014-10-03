@@ -1,0 +1,22 @@
+# HG changeset patch
+# Parent 811d041616fb1cb3db240fc68e02359502870d24
+# User Dave Yeo <daveryeo@telus.net>
+
+diff --git a/lib/pkgconfig/fontconfig.pc b/lib/pkgconfig/fontconfig.pc
+--- a/lib/pkgconfig/fontconfig.pc
++++ b/lib/pkgconfig/fontconfig.pc
+@@ -1,11 +1,11 @@
+ 
+ prefix=/mzfntcfgft
+ exec_prefix=${prefix}
+ libdir=${exec_prefix}/lib
+-includedir=${exec_prefix}/include
++includedir=${exec_prefix}/fontconfig/include
+ 
+ Name: FONTCONFIG
+-Description: Provides FontConfig and Freetype
++Description: Provides FontConfig
+ Version: 2.4.0
+-Libs: -L${libdir} -lmozft -lmzfntcfg"
++Libs: -L${libdir} -lmzfntcfg
+ Cflags: -I${includedir}

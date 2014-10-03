@@ -1,0 +1,587 @@
+** EXPERIMENTAL (HLL) ** Open Watcom Linker Version 1.6beta1 Limited Availability
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       13/01/04 22:03:38
+Executable Image: objs/freetyp2.dll
+creating an OS/2 EMX dynamic link library
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+CGROUP                          0001:00000000        00082430
+DGROUP                          0002:00000000        00000460
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+TEXT32                 CODE           CGROUP         0001:00000000   00082430
+________TEXT           CODE           CGROUP         0001:00082430   00000000
+DATA32                 DATA           DGROUP         0002:00000000   00000380
+SET1__os2dll           DATA           DGROUP         0002:00000380   00000004
+SET2__os2dll           DATA           DGROUP         0002:00000384   00000000
+SET3__os2dll           DATA           DGROUP         0002:00000384   00000004
+SET1___CTOR_LIST__     DATA           DGROUP         0002:00000388   00000004
+SET2___CTOR_LIST__     DATA           DGROUP         0002:0000038c   00000000
+SET3___CTOR_LIST__     DATA           DGROUP         0002:0000038c   00000004
+SET1___DTOR_LIST__     DATA           DGROUP         0002:00000390   00000004
+SET2___DTOR_LIST__     DATA           DGROUP         0002:00000394   00000000
+SET3___DTOR_LIST__     DATA           DGROUP         0002:00000394   00000004
+SET1___crtinit1__      DATA           DGROUP         0002:00000398   00000004
+SET2___crtinit1__      DATA           DGROUP         0002:0000039c   00000000
+SET3___crtinit1__      DATA           DGROUP         0002:0000039c   00000004
+SET1___crtexit1__      DATA           DGROUP         0002:000003a0   00000004
+SET2___crtexit1__      DATA           DGROUP         0002:000003a4   00000000
+SET3___crtexit1__      DATA           DGROUP         0002:000003a4   00000004
+SET1___eh_frame__      DATA           DGROUP         0002:000003a8   00000004
+SET2___eh_frame__      DATA           DGROUP         0002:000003ac   00000010
+SET3___eh_frame__      DATA           DGROUP         0002:000003bc   00000004
+SET1___eh_init__       DATA           DGROUP         0002:000003c0   00000004
+SET2___eh_init__       DATA           DGROUP         0002:000003c4   00000004
+SET3___eh_init__       DATA           DGROUP         0002:000003c8   00000004
+SET1___eh_term__       DATA           DGROUP         0002:000003cc   00000004
+SET2___eh_term__       DATA           DGROUP         0002:000003d0   00000004
+SET3___eh_term__       DATA           DGROUP         0002:000003d4   00000004
+SET1___fork_parent1__  DATA           DGROUP         0002:000003d8   00000004
+SET2___fork_parent1__  DATA           DGROUP         0002:000003dc   00000000
+SET3___fork_parent1__  DATA           DGROUP         0002:000003dc   00000004
+SET1___fork_child1__   DATA           DGROUP         0002:000003e0   00000004
+SET2___fork_child1__   DATA           DGROUP         0002:000003e4   00000000
+SET3___fork_child1__   DATA           DGROUP         0002:000003e4   00000004
+________DATA           DATA           DGROUP         0002:000003f0   00000000
+BSS32                  BSS            DGROUP         0002:000003f0   00000070
+c_common               BSS            DGROUP         0002:00000460   00000000
+________BSS            BSS            DGROUP         0002:00000460   00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: G:\usr\lib\dll0hi.obj({standard input})
+0001:00000000* __text
+0002:00000000* __data
+0002:00000000* ___data_start
+0002:000003f0* ___bss_start
+0002:00000380+ __os2dll
+0002:00000388  ___CTOR_LIST__
+0002:00000390  ___DTOR_LIST__
+0002:00000398* ___crtinit1__
+0002:000003a0* ___crtexit1__
+0002:000003a8  ___eh_frame__
+0002:000003c0  ___eh_init__
+0002:000003cc  ___eh_term__
+0002:000003d8+ ___fork_parent1__
+0002:000003e0+ ___fork_child1__
+Module: R:/tmp\ldconv_ftsystem_o_71ef50e7c23913e418.obj(src\base\ftsystem.c)
+0001:000000a0  _FT_Done_Memory
+0001:000000be  _FT_New_Memory
+0001:0000011e  _FT_Stream_Open
+Module: R:/tmp\ldconv_ftdebug_o_71ef50e7c239140358.obj(src\base\ftdebug.c)
+0001:00000280* _ft_debug_init
+0001:00000285* _FT_Trace_Get_Count
+0001:0000028c* _FT_Trace_Get_Name
+Module: R:/tmp\ldconv_ftinit_o_71ef50e7c239142298.obj(src\base\ftinit.c)
+0001:000002a0  _FT_Done_FreeType
+0001:000002c8  _FT_Add_Default_Modules
+0001:000002f9  _FT_Init_FreeType
+Module: R:/tmp\ldconv_ftbase_o_71ef50e7c239143a08.obj(.\src\base\ftbase.c)
+0001:000003c0  _FT_RoundFix
+0001:000003e3  _FT_CeilFix
+0001:00000406  _FT_FloorFix
+0001:0000041e* _FT_Sqrt32
+0001:0000060e  _FT_MulDiv
+0001:00000764  _FT_MulDiv_No_Round
+0001:00000893  _FT_MulFix
+0001:000008b8  _FT_DivFix
+0001:0000094b  _FT_Matrix_Multiply
+0001:00000aa6  _FT_Matrix_Multiply_Scaled
+0001:00000bb4  _FT_Vector_Transform_Scaled
+0001:00000c4d  _FT_SqrtFixed
+0001:00000ca2  _ft_corner_orientation
+0001:00000dd5  _ft_corner_is_flat
+0001:00000e42  _FT_GlyphLoader_Rewind
+0001:00000e6e  _FT_GlyphLoader_Prepare
+0001:00000ed0  _ft_validator_init
+0001:00000ef0* _ft_validator_run
+0001:00000efa  _FT_Set_Transform
+0001:00001061  _FT_Reference_Face
+0001:00001075  _FT_Match_Size
+0001:00001192  _ft_synthesize_vertical_metrics
+0001:000011ff  _FT_Select_Metrics
+0001:00001338  _FT_Select_Size
+0001:0000138b  _FT_Get_Kerning
+0001:000014da  _FT_Get_Track_Kerning
+0001:00001545  _FT_Select_Charmap
+0001:000015b8  _FT_Get_Charmap_Index
+0001:00001602  _FT_Get_Char_Index
+0001:00001626  _FT_Get_Next_Char
+0001:0000168f  _FT_Get_Name_Index
+0001:0000170e  _FT_Get_Glyph_Name
+0001:000017f3  _FT_Get_Postscript_Name
+0001:0000186d  _FT_Get_Sfnt_Table
+0001:000018bc  _FT_Load_Sfnt_Table
+0001:0000193b  _FT_Sfnt_Table_Info
+0001:000019b3  _FT_Get_CMap_Language_ID
+0001:00001a05  _FT_Get_CMap_Format
+0001:00001a56  _FT_Activate_Size
+0001:00001a7b  _FT_Lookup_Renderer
+0001:00001ac8  _FT_Get_Renderer
+0001:00001af6  _FT_Set_Renderer
+0001:00001bd9  _ft_module_get_service
+0001:00001c4c  _FT_Reference_Library
+0001:00001c5d  _FT_Library_Version
+0001:00001c99  _FT_Set_Debug_Hook
+0001:00001cbb  _ft_stub_set_char_sizes
+0001:00001d22  _ft_stub_set_pixel_sizes
+0001:00001d71  _FT_Get_SubGlyph_Info
+0001:00001de9  _FT_Outline_Decompose
+0001:00002223  _FT_Outline_Check
+0001:00002281  _FT_Outline_Get_CBox
+0001:0000231c  _FT_Outline_Translate
+0001:00002353  _FT_Outline_Reverse
+0001:0000240a  _FT_Vector_Transform
+0001:000024c6  _FT_Outline_Transform
+0001:000025ad  _FT_Outline_Get_Orientation
+0001:0000269e  _FT_Get_Sfnt_Name_Count
+0001:000026bb  _FT_Stream_OpenMemory
+0001:000026ea  _FT_Stream_Close
+0001:00002703  _FT_Stream_Seek
+0001:00002752  _FT_Stream_Pos
+0001:0000275d  _FT_Stream_GetChar
+0001:00002778  _FT_Stream_GetUShort
+0001:000027a9  _FT_Stream_GetUShortLE
+0001:000027da* _FT_Stream_GetUOffset
+0001:00002814  _FT_Stream_GetULong
+0001:00002857  _FT_Stream_GetULongLE
+0001:0000289d  _FT_Stream_ReadChar
+0001:0000290f  _FT_Stream_ReadUShort
+0001:0000298a  _FT_Stream_ReadUShortLE
+0001:00002a05  _FT_Stream_ReadUOffset
+0001:00002a8c  _FT_Stream_ReadULong
+0001:00002b1c  _FT_Stream_ReadULongLE
+0001:00002bac  _FT_Vector_Length
+0001:00002d58  _FT_Angle_Diff
+0001:00002da7  _ft_mem_qalloc
+0001:00002ddf  _ft_mem_free
+0001:00002df7  _ft_mem_strcpyn
+0001:00002e31  _FT_List_Find
+0001:00002e54  _FT_List_Add
+0001:00002e7c  _FT_List_Insert
+0001:00002ea1  _FT_List_Remove
+0001:00002ec7  _FT_List_Up
+0001:00002efa  _FT_List_Iterate
+0001:00002f34  _ft_highpow2
+0001:00002f45  _FT_Stream_TryRead
+0001:00002fa8  _FT_Stream_ReadAt
+0001:00003020  _FT_Outline_Copy
+0001:000030c5* _ft_property_do
+0001:000031d9  _FT_Get_Module
+0001:00003238  _ft_service_list_lookup
+0001:00003279  _ft_validator_error
+0001:0000329b  _FT_GlyphLoader_Add
+0001:0000333b* _FT_QAlloc
+0001:00003375* _ft_mem_dup
+0001:000033f3  _ft_mem_alloc
+0001:0000345c  _ft_mem_qrealloc
+0001:0000353a  _FT_Get_Module_Interface
+0001:00003598  _FT_Get_First_Char
+0001:00003639  _FT_Get_TrueType_Engine_Type
+0001:000036ec  _FT_Cos
+0001:0000378e  _FT_Vector_Unit
+0001:00003830  _FT_Stream_EnterFrame
+0001:0000391e  _ft_mem_strdup
+0001:000039aa  _FT_Sin
+0001:00003a51  _FT_Stream_Read
+0001:00003ac9  _FT_List_Finalize
+0001:00003bc7* _FT_GlyphLoader_Reset
+0001:00003c8f  _FT_GlyphLoader_Done
+0001:00003cb9* _FT_Free
+0001:00003ce2  _FT_Stream_ExitFrame
+0001:00003d20  _FT_Stream_ReleaseFrame
+0001:00003d5d  _FT_Vector_Polarize
+0001:00003f36* _FT_Stream_Free
+0001:00003f76  _FT_Set_Charmap
+0001:0000400f  _FT_Outline_Done_Internal
+0001:000040b4  _ft_glyphslot_free_bitmap
+0001:00004109  _ft_glyphslot_set_bitmap
+0001:0000416a  _FT_Outline_EmboldenXY
+0001:00004879  _FT_Outline_Embolden
+0001:00004897  _FT_Vector_Rotate
+0001:00004adb  _FT_Vector_From_Polar
+0001:00004dc7  _FT_Done_Face
+0001:00004e59  _FT_Face_GetCharVariantIsDefault
+0001:00004f25* _FT_Raccess_Guess
+0001:0000d2f0* _ft_raccess_guess_table
+0001:000055f0  _FT_Atan2
+0001:0000580b  _FT_Done_GlyphSlot
+0001:00005a12  _FT_Remove_Module
+0001:00005a97  _FT_Done_Library
+0001:00005ccf  _FT_Stream_Skip
+0001:00005d2a  _FT_Done_Size
+0001:00005e30  _FT_Face_GetCharsOfVariant
+0001:00005efd  _FT_Face_GetVariantsOfChar
+0001:00005fca  _FT_Face_GetVariantSelectors
+0001:00006090  _FT_Outline_Done
+0001:00006140  _FT_Render_Glyph
+0001:000062d1  _FT_Load_Glyph
+0001:00006955  _FT_Load_Char
+0001:000069a0  _FT_Get_Advances
+0001:00006b4c  _FT_Get_Advance
+0001:00006d05  _FT_Face_GetCharVariantIndex
+0001:00006de9  _FT_Stream_ExtractFrame
+0001:00006eec* _FT_QRealloc
+0001:00006f8a  _ft_mem_realloc
+0001:000070b4* _FT_Realloc
+0001:000070f7  _FT_Get_Sfnt_Name
+0001:0000722a* _FT_CMap_Done
+0001:00007353  _FT_GlyphLoader_CheckSubGlyphs
+0001:000073cd  _FT_GlyphLoader_CreateExtra
+0001:0000745f  _FT_GlyphLoader_CheckPoints
+0001:0000764f  _FT_GlyphLoader_CopyPoints
+0001:0000777c  _FT_Render_Glyph_Internal
+0001:000078e4* _FT_Property_Get
+0001:000079b8* _FT_Property_Set
+0001:00007a8b  _FT_Outline_Render
+0001:00007baf  _FT_Tan
+0001:00007cda* _FT_Raccess_Get_DataOffsets
+0001:000080fc  _FT_Outline_New_Internal
+0001:0000827e  _FT_Outline_New
+0001:000082b5  _FT_Outline_Get_Bitmap
+0001:000085fd* _FT_Raccess_Get_HeaderInfo
+0001:000089d6  _FT_Matrix_Invert
+0001:00008ddd* _FT_Alloc
+0001:0000907f  _ft_glyphslot_alloc_bitmap
+0001:00009117  _FT_GlyphLoader_New
+0001:0000918e  _FT_Add_Module
+0001:00009483  _FT_New_Library
+0001:0000957a  _FT_New_GlyphSlot
+0001:000096f3* _FT_Stream_New
+0001:0000992e  _FT_Attach_Stream
+0001:00009b7d  _FT_Attach_File
+0001:00009c3d  _FT_Request_Metrics
+0001:0000a0ed  _FT_Request_Size
+0001:0000a193  _FT_Set_Pixel_Sizes
+0001:0000a299  _FT_Set_Char_Size
+0001:0000a383  _FT_New_Size
+0001:0000a4c2  _FT_CMap_New
+0001:0000a61b  _FT_Stream_ReadFields
+0001:0000b658  _FT_Open_Face
+0001:0000d0e3  _FT_New_Memory_Face
+0001:0000d12e  _FT_New_Face
+Module: R:/tmp\ldconv_ftbbox_o_71ef50e7c2391474a0.obj(src\base\ftbbox.c)
+0001:0000d3b7  _FT_Outline_Get_BBox
+Module: R:/tmp\ldconv_ftbdf_o_71ef50e7c2391493e0.obj(src\base\ftbdf.c)
+0001:0000dac4  _FT_Get_BDF_Charset_ID
+0001:0000db3f  _FT_Get_BDF_Property
+Module: R:/tmp\ldconv_ftbitmap_o_71ef50e7c23914b320.obj(src\base\ftbitmap.c)
+0001:0000dba0  _FT_Bitmap_New
+0001:0000dbb9  _FT_Bitmap_Done
+0001:0000dc06  _FT_Bitmap_Convert
+0001:0000e01e  _FT_Bitmap_Embolden
+0001:0000e7fc  _FT_Bitmap_Copy
+0001:0000e8fc  _FT_GlyphSlot_Own_Bitmap
+Module: R:/tmp\ldconv_ftcid_o_71ef50e7c23914d260.obj(src\base\ftcid.c)
+0001:0000ea64  _FT_Get_CID_Registry_Ordering_Supplement
+0001:0000eafc  _FT_Get_CID_Is_Internally_CID_Keyed
+0001:0000eb5a  _FT_Get_CID_From_Glyph_Index
+Module: R:/tmp\ldconv_ftfstype_o_71ef50e7c239150528.obj(src\base\ftfstype.c)
+0001:0000ebe0  _FT_Get_FSType_Flags
+Module: R:/tmp\ldconv_ftgasp_o_71ef50e7c239152468.obj(src\base\ftgasp.c)
+0001:0000ec60  _FT_Get_Gasp
+Module: R:/tmp\ldconv_ftglyph_o_71ef50e7c2391543a8.obj(src\base\ftglyph.c)
+0001:0000ed2b  _FT_Glyph_Get_CBox
+0001:0000efc0  _FT_Done_Glyph
+0001:0000eff5  _FT_Glyph_Copy
+0001:0000f0b1  _FT_Glyph_Transform
+0001:0000f110  _FT_Get_Glyph
+0001:0000f420* _ft_bitmap_glyph_class
+0001:0000f440  _ft_outline_glyph_class
+0001:0000f1ef  _FT_Glyph_To_Bitmap
+Module: R:/tmp\ldconv_ftgxval_o_71ef50e7c2391562e8.obj(src\base\ftgxval.c)
+0001:0000f460  _FT_ClassicKern_Free
+0001:0000f47b  _FT_TrueTypeGX_Free
+0001:0000f4ab  _FT_ClassicKern_Validate
+0001:0000f51a  _FT_TrueTypeGX_Validate
+Module: R:/tmp\ldconv_ftlcdfil_o_71ef50e7c239158228.obj(src\base\ftlcdfil.c)
+0001:0000f590  _FT_Library_SetLcdFilterWeights
+0001:0000f59a  _FT_Library_SetLcdFilter
+Module: R:/tmp\ldconv_ftmm_o_71ef50e7c2391595b0.obj(src\base\ftmm.c)
+0001:0000f5be  _FT_Set_MM_Blend_Coordinates
+0001:0000f653  _FT_Set_Var_Blend_Coordinates
+0001:0000f6e8  _FT_Get_Multi_Master
+0001:0000f773  _FT_Get_MM_Var
+0001:0000f7ff  _FT_Set_MM_Design_Coordinates
+0001:0000f894  _FT_Set_Var_Design_Coordinates
+Module: R:/tmp\ldconv_ftotval_o_71ef50e7c23915b4f0.obj(src\base\ftotval.c)
+0001:0000f930  _FT_OpenType_Free
+0001:0000f95d  _FT_OpenType_Validate
+Module: R:/tmp\ldconv_ftpatent_o_71ef50e7c239160310.obj(src\base\ftpatent.c)
+0001:0000fa10  _FT_Face_SetUnpatentedHinting
+0001:0000fa2a  _FT_Face_CheckTrueTypePatents
+Module: R:/tmp\ldconv_ftpfr_o_71ef50e7c239162250.obj(src\base\ftpfr.c)
+0001:0000ffdc  _FT_Get_PFR_Metrics
+0001:000100da  _FT_Get_PFR_Advance
+0001:00010168  _FT_Get_PFR_Kerning
+Module: R:/tmp\ldconv_ftstroke_o_71ef50e7c239163da8.obj(src\base\ftstroke.c)
+0001:00010230  _FT_Stroker_Set
+0001:00010288  _FT_Stroker_Rewind
+0001:000102b8  _FT_Stroker_BeginSubPath
+0001:00010312  _FT_Stroker_GetBorderCounts
+0001:000103b4  _FT_Stroker_GetCounts
+0001:000104c2  _FT_Stroker_ExportBorder
+0001:000105db  _FT_Stroker_New
+0001:00010679  _FT_Outline_GetOutsideBorder
+0001:00010694  _FT_Outline_GetInsideBorder
+0001:000106af  _FT_Stroker_Done
+0001:00010779  _FT_Stroker_Export
+0001:00011b1e  _FT_Stroker_LineTo
+0001:0001216c  _FT_Stroker_EndSubPath
+0001:000124e5  _FT_Stroker_CubicTo
+0001:00013a50  _FT_Stroker_ConicTo
+0001:00014b77  _FT_Stroker_ParseOutline
+0001:00014f44  _FT_Glyph_Stroke
+0001:00015066  _FT_Glyph_StrokeBorder
+Module: R:/tmp\ldconv_ftsynth_o_71ef50e7c239165ce8.obj(src\base\ftsynth.c)
+0001:000151d0  _FT_GlyphSlot_Embolden
+0001:000152e9  _FT_GlyphSlot_Oblique
+Module: R:/tmp\ldconv_fttype1_o_71ef50e7c239167c28.obj(src\base\fttype1.c)
+0001:00015340  _FT_Get_PS_Font_Info
+0001:0001538f  _FT_Has_PS_Glyph_Names
+0001:000153d3  _FT_Get_PS_Font_Private
+0001:00015423  _FT_Get_PS_Font_Value
+Module: R:/tmp\ldconv_ftwinfnt_o_71ef50e7c239169b68.obj(src\base\ftwinfnt.c)
+0001:000154a9  _FT_Get_WinFNT_Header
+Module: R:/tmp\ldconv_ftxf86_o_71ef50e7c23916baa8.obj(src\base\ftxf86.c)
+0001:00015531  _FT_Get_X11_Font_Format
+Module: R:/tmp\ldconv_truetype_o_71ef50e7c23916d600.obj(.\src\truetype\truetype.c)
+0001:0001c708  _TT_New_Context
+0001:000231a0* _tt_default_graphics_state
+0001:0001ed33  _TT_RunIns
+0001:00023130  _tt_driver_class
+Module: R:/tmp\ldconv_type1_o_71ef50e7c239171c50.obj(.\src\type1\type1.c)
+0001:00029360  _t1_driver_class
+Module: R:/tmp\ldconv_cff_o_71ef50e7c2391785c8.obj(.\src\cff\cff.c)
+0001:00032f10* _cff_cmap_encoding_class_rec
+0001:00032f40* _cff_cmap_unicode_class_rec
+0001:00032ea0  _cff_driver_class
+Module: R:/tmp\ldconv_type1cid_o_71ef50e7c23917dbb8.obj(.\src\cid\type1cid.c)
+0001:00035f40  _t1cid_driver_class
+Module: R:/tmp\ldconv_pfr_o_71ef50e7c239180a98.obj(.\src\pfr\pfr.c)
+0001:00039e30* _pfr_cmap_class_rec
+0001:00039e58* _pfr_metrics_service_rec
+0001:00039e70  _pfr_driver_class
+Module: R:/tmp\ldconv_type42_o_71ef50e7c239182dc0.obj(.\src\type42\type42.c)
+0001:0003c100  _t42_driver_class
+Module: R:/tmp\ldconv_winfnt_o_71ef50e7c239188b80.obj(.\src\winfonts\winfnt.c)
+0001:0003d6e0  _winfnt_driver_class
+Module: R:/tmp\ldconv_pcf_o_71ef50e7c23918b290.obj(.\src\pcf\pcf.c)
+0001:0003fc30* _pcf_cmap_class
+0001:0003fc60  _pcf_driver_class
+Module: R:/tmp\ldconv_bdf_o_71ef50e7c23918dd88.obj(.\src\bdf\bdf.c)
+0001:00044230* _bdf_cmap_class
+0001:00044260  _bdf_driver_class
+Module: R:/tmp\ldconv_sfnt_o_71ef50e7c239190c68.obj(.\src\sfnt\sfnt.c)
+0001:0004e150* _tt_cmap0_class_rec
+0001:0004e190* _tt_cmap2_class_rec
+0001:0004e1d0* _tt_cmap4_class_rec
+0001:0004e210* _tt_cmap6_class_rec
+0001:0004e250* _tt_cmap8_class_rec
+0001:0004e290* _tt_cmap10_class_rec
+0001:0004e2d0* _tt_cmap12_class_rec
+0001:0004e310* _tt_cmap13_class_rec
+0001:0004e350* _tt_cmap14_class_rec
+0001:0004e390  _sfnt_module_class
+Module: R:/tmp\ldconv_autofit_o_71ef50e7c2391975e0.obj(.\src\autofit\autofit.c)
+0001:0004eb23* _af_glyph_hints_dump_points
+0001:0004eb28* _af_glyph_hints_dump_segments
+0001:0004eb2d* _af_glyph_hints_get_num_segments
+0001:0004eb34* _af_glyph_hints_get_segment_offset
+0001:0004eb3b* _af_glyph_hints_dump_edges
+0001:00056a90* _af_dummy_script_class
+0001:00056ac0* _af_latin_script_class
+0001:00056af0* _af_cjk_script_class
+0001:00056b20* _af_indic_script_class
+0001:00056656* _af_property_get_face_globals
+0001:000568c3* _af_property_set
+0001:0005697c* _af_property_get
+0001:00056b50* _af_autofitter_interface
+0001:00056b70  _autofit_module_class
+Module: R:/tmp\ldconv_pshinter_o_71ef50e7c23919ac90.obj(.\src\pshinter\pshinter.c)
+0001:00059b64* _ps_hints_apply
+0001:0005b750  _pshinter_module_class
+Module: R:/tmp\ldconv_raster_o_71ef50e7c23919f2e0.obj(.\src\raster\raster.c)
+0001:0005e540  _ft_raster1_renderer_class
+0001:0005e590* _ft_raster5_renderer_class
+0001:0005e520* _ft_standard_raster
+Module: R:/tmp\ldconv_smooth_o_71ef50e7c2391a1608.obj(.\src\smooth\smooth.c)
+0001:00061280* _ft_grays_raster
+0001:000612a0  _ft_smooth_renderer_class
+0001:000612f0  _ft_smooth_lcd_renderer_class
+0001:00061340  _ft_smooth_lcdv_renderer_class
+Module: R:/tmp\ldconv_ftcache_o_71ef50e7c2391a3d18.obj(.\src\cache\ftcache.c)
+0001:000613c2  _FTC_Node_Unref
+0001:000617e7  _FTC_Manager_New
+0001:000656b0* _ftc_face_list_class
+0001:00065690* _ftc_size_list_class
+0001:00061de7* _ftc_node_destroy
+0001:00061fd6  _FTC_Manager_LookupFace
+0001:00062062* _FTC_SBit_Cache_New
+0001:00065760* _ftc_basic_sbit_cache_class
+0001:0006214d  _FTC_Manager_LookupSize
+0001:000622f3  _FTC_Manager_Lookup_Face
+0001:000627eb  _FTC_Manager_Lookup_Size
+0001:00062912  _FTC_SBitCache_New
+0001:000629fd  _FTC_ImageCache_New
+0001:00065710* _ftc_basic_image_cache_class
+0001:00062ae8  _FTC_CMapCache_New
+0001:000656d0* _ftc_cmap_cache_class
+0001:00062bd3* _FTC_Image_Cache_New
+0001:00062cbe  _FTC_Manager_Reset
+0001:00062ec3  _FTC_Manager_Done
+0001:00063096  _FTC_Manager_RemoveFaceID
+0001:00063fa6  _FTC_SBitCache_LookupScaler
+0001:000642e9  _FTC_SBitCache_Lookup
+0001:00064658  _FTC_ImageCache_LookupScaler
+0001:0006498e  _FTC_ImageCache_Lookup
+0001:00064cef  _FTC_CMapCache_Lookup
+0001:00064ffd* _FTC_Image_Cache_Lookup
+0001:00065335* _FTC_SBit_Cache_Lookup
+0001:000656f0* _ftc_basic_image_family_class
+0001:00065740* _ftc_basic_sbit_family_class
+Module: R:/tmp\ldconv_ftgzip_o_71ef50e7c2391a6bf8.obj(.\src\gzip\ftgzip.c)
+0001:0006860d  _FT_Stream_OpenGzip
+Module: R:/tmp\ldconv_ftlzw_o_71ef50e7c2391a9308.obj(.\src\lzw\ftlzw.c)
+0001:00069dd0* _ft_lzwstate_reset
+0001:00069eb0* _ft_lzwstate_done
+0001:00069f33* _ft_lzwstate_init
+0001:00069fb2  _FT_Stream_OpenLZW
+0001:0006a1e4* _ft_lzwstate_io
+Module: R:/tmp\ldconv_ftbzip2_o_71ef50e7c2391aae60.obj(.\src\bzip2\ftbzip2.c)
+0001:0006ab70  _FT_Stream_OpenBzip2
+Module: R:/tmp\ldconv_psaux_o_71ef50e7c2391acda0.obj(.\src\psaux\psaux.c)
+0001:00070960* _ps_parser_funcs
+0001:00070950* _ps_table_funcs
+0001:000709a0* _t1_builder_funcs
+0001:000709c0* _t1_decoder_funcs
+0001:000709cc* _afm_parser_funcs
+0001:000709e0* _t1_cmap_classes
+0001:00070a30* _t1_cmap_standard_class_rec
+0001:00070a60* _t1_cmap_expert_class_rec
+0001:00070a90* _t1_cmap_custom_class_rec
+0001:00070ac0* _t1_cmap_unicode_class_rec
+0001:00070a00  _psaux_module_class
+Module: R:/tmp\ldconv_psnames_o_71ef50e7c2391b0450.obj(.\src\psnames\psmodule.c)
+0001:00071b50  _psnames_module_class
+Module: R:\tmp\ldconv_libgcc_eh_a_71ef50e7c2391b3330.lib(emx-dllinit.obj)
+0001:00080e70  _DLL_InitTerm
+Module: G:\usr\lib\libend.lib(src/libend/386/endlink386.asm)
+0002:00000460  _end
+0002:000003f0  _edata
+Module: G:\usr\lib\libend.lib(src/libend/386/end.asm)
+0001:00082430* _etext
+0001:00082430* __etext
+0000:00000000* WEAK$ZERO
+0002:00000460  __end
+0002:000003f0  __edata
+Module: R:\tmp\ldconv_libgcc_a_71ef50e7c2391beac8.lib(emx-ctordtor.obj)
+0001:00080eb0  ___ctordtorTerm
+0001:00080ee2  ___ctordtorInit
+Module: R:\tmp\ldconv_libgcc_eh_a_71ef50e7c2391b3330.lib(emx-eh.obj)
+0001:00080f55  ___ehInit
+0001:00080f20* ___ehTerm
+Module: R:\tmp\ldconv_libgcc_eh_a_71ef50e7c2391b3330.lib(unwind-dw2-fde.obj)
+0001:00081e1f* ___deregister_frame_info_bases
+0001:00081f8a* ___deregister_frame_info
+0001:00081f95  ___deregister_frame
+0001:00081fba* ___register_frame_info_table_bases
+0001:000820ac* ___register_frame_info_table
+0001:000820d7  ___register_frame_table
+0001:000820fa* __Unwind_Find_FDE
+0001:000822d6* ___register_frame_info_bases
+0001:000823d5* ___register_frame_info
+0001:00082400* ___register_frame
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+___libc_ForkRegisterModule          libc064
+___init_dll                         libc064
+___libc_Back_termDll                libc064
+___libc_ForkDeregisterModule        libc064
+__atfork_callback                   libc064
+__CRT_init                          libc064
+__std_free                          libc064
+__std_malloc                        libc064
+__std_realloc                       libc064
+__std_fopen                         libc064
+__std_fseek                         libc064
+__std_ftell                         libc064
+__std_fclose                        libc064
+__std_fread                         libc064
+__std_memcpy                        libc064
+__std_strcmp                        libc064
+__std_longjmp                       libc064
+__std_memset                        libc064
+__std_memmove                       libc064
+__std_qsort                         libc064
+__std_strrchr                       libc064
+__std_strncpy                       libc064
+__std_strcat                        libc064
+__std_memcmp                        libc064
+__std_strstr                        libc064
+__std_strncmp                       libc064
+__std_atol                          libc064
+__std_sprintf                       libc064
+__std_setjmp                        libc064
+__std_memchr                        libc064
+___ctordtorTerm1                    libc064
+___ctordtorInit1                    libc064
+__fmutex_create                     libc064
+___libc_Back_threadSleep            libc064
+___libc_GpFIBLIS                    libc064
+___fmutex_request_internal          libc064
+___fmutex_request_internal_must_complete libc064
+___fmutex_release_internal_must_complete libc064
+___fmutex_release_internal          libc064
+__std_abort                         libc064
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+R:\tmp\ldconv_libgcc_eh_a_71ef50e7c2391b3330.lib
+R:\tmp\ldconv_libgcc_a_71ef50e7c2391beac8.lib
+G:\usr\lib\libc_alias.lib
+G:\usr\local446\lib\libc_dll.lib
+G:\usr\lib\libend.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0000 (0.)
+Memory size:  00082890 (534672.)
+Link time: 00:00.08

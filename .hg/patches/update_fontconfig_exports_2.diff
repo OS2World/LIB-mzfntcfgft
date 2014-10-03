@@ -1,0 +1,26 @@
+# HG changeset patch
+# Parent 44d4c9281684e3bc87fda1c1af1ae49c77722971
+# User Dave Yeo <daveryeo@telus.net>
+Add _FcConfigGetCurrent for Mozilla
+
+diff --git a/fontconfig/exports.list b/fontconfig/exports.list
+--- a/fontconfig/exports.list
++++ b/fontconfig/exports.list
+@@ -30,16 +30,17 @@
+      _FcFreeTypeQueryFace
+      _FcFreeTypeCharIndex
+      _FcPatternEqual
+      _FcInitReinitialize
+      _FcInitBringUptoDate
+      _FcConfigUptoDate
+      _FcLangSetHasLang
+      _FcConfigGetFonts
++     _FcConfigGetCurrent
+      _FcStrCmpIgnoreCase
+      _FcPatternReference
+      _FcPatternDuplicate
+      _FcPatternBuild
+      _FcPatternAdd
+      _FcPatternAddWeak
+      _FcPatternGetLangSet
+      _FcLangSetCreate

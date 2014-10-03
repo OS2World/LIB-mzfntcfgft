@@ -1,0 +1,48 @@
+# HG changeset patch
+# Parent f0de35bc91190ba606c4e398ff4a0f259b6db88a
+# User Dave Yeo <daveryeo@telus.net>
+Build map files along with the DLLs
+
+diff --git a/fontconfig/Makefile b/fontconfig/Makefile
+--- a/fontconfig/Makefile
++++ b/fontconfig/Makefile
+@@ -20,17 +20,17 @@
+ $(FONTCONFIG_DLL): $(FONTCONFIG_OBJS)
+ 	@echo "Link Fontconfig into $(FONTCONFIG_DLL)..."
+ 	@echo "LIBRARY $(PROJECT) INITINSTANCE TERMINSTANCE" \
+ 	   > $(FONTCONFIG_NAME).def
+ 	@echo "DESCRIPTION '$(PROJECT), a new OS/2 Fontconfig version'" \
+ 	   >> $(FONTCONFIG_NAME).def
+ 	cat ./exports.list >> $(FONTCONFIG_NAME).def
+ 
+-	$(CC) -g -Zbin-files -Zhigh-mem -Zomf -Zdll $(FONTCONFIG_DLLFLAGS) -o $@ \
++	$(CC) -g -Zbin-files -Zhigh-mem -Zomf -Zmap -Zdll $(FONTCONFIG_DLLFLAGS) -o $@ \
+ 	      $(FONTCONFIG_NAME).def $^
+ 	ar cru $(FONTCONFIG_NAME)_s.a $(FONTCONFIG_OBJS)
+ 	emximp -o $(FONTCONFIG_NAME).a $(FONTCONFIG_NAME).def
+ 	emximp -o $(FONTCONFIG_NAME).lib $(FONTCONFIG_NAME).def
+ 
+ $(OBJS)/fontconfig.o: $(SRC)/fontconfig.c $(SRC)/fcint.h
+ 	@echo $<
+ 	$(CC) $(CFLAGS) -c -o $@ $<
+diff --git a/freetype/builds/os2/linkdll.mk b/freetype/builds/os2/linkdll.mk
+--- a/freetype/builds/os2/linkdll.mk
++++ b/freetype/builds/os2/linkdll.mk
+@@ -34,16 +34,16 @@
+   # this is compiler-specific
+   #
+   $(PROJECT_LIBRARY): $(OBJECTS_LIST) $(OBJ_DIR)/$(OS2DLLNAME)
+ 
+ 
+ $(OBJ_DIR)/$(OS2DLLNAME): $(OBJECTS_LIST)
+ 	rm -f $(OBJ_DIR)/$(PROJECT).a
+ 	ar cru $(OBJ_DIR)/$(PROJECT)_s.a $(OBJECTS_LIST)
+-	gcc -g -Zbin-files -Zhigh-mem -Zomf -Zdll $(EXPORTS_LIST) -o $@ $(OBJECTS_LIST) 
++	gcc -g -Zbin-files -Zhigh-mem -Zomf -Zmap -Zdll $(EXPORTS_LIST) -o $@ $(OBJECTS_LIST) 
+ 	emximp -o $(OBJ_DIR)/$(PROJECT).a $(EXPORTS_LIST)
+ 	emximp -o $(OBJ_DIR)/$(PROJECT).lib $(EXPORTS_LIST)
+ #	cp $@ $(OBJ_DIR)
+ 
+ endif
+ 
+ # EOF
